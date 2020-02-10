@@ -6,8 +6,8 @@ class CnblogsSpider extends BaseSpider {
     const footerContent = `<br><b>本篇文章由一文多发平台<a href="https://github.com/crawlab-team/artipub" target="_blank">ArtiPub</a>自动发布</b>`
     const content = article.contentHtml
     const iframeWindow = document.querySelector('#Editor_Edit_EditorBody_ifr').contentWindow
-    const el = iframeWindow.document.querySelector(editorSel.content)
-    el.focus()
+    // const el = iframeWindow.document.querySelector(editorSel.content)
+    // el.focus()
     iframeWindow.document.execCommand('delete', false)
     iframeWindow.document.execCommand('insertHTML', false, content)
   }
